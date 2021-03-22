@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Choi.W.S</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+</head>
+<body cz-shortcut-listen="true">
+    <header class="nav">
+        <div class="nav__column"><a href="#profile">Profile</a></div>
+        <div class="nav__column"><a href="#likes">Likes</a></div> 
+        <div class="nav__column"><a href="#contact">Contact</a></div>
+        <div class="nav__column"><a href="#game">Game</a></div>
+        <div class="nav__column">
+            <input type="button" value="dark" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            var a  = document.querySelectorAll('a');
+            for (var i = 0; i < a.length; i++){
+                a[i].style.color = 'white';
+            }">
+            <input type="button" value="light" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            var a  = document.querySelectorAll('a');
+            for (var i = 0; i < a.length; i++){
+                a[i].style.color = 'black';
+            }"">
+        </div>             
+    </header>
+    
+    <main>
+        <p class="title">Profile</p>
+        <section class="profile" id="profile">
+            <img class="profile__photo" src="{{ url_for('static', filename='img/photo.jpg') }}" alt="">
+            <div class="profile__info">
+                <p class="name">이름: 최우석</p>
+                <p class="age">나이: 26</p>
+                <p class="mbti">MBTI: ISFJ</p>
+                <p class="goal">같이 일하고 싶은 웹 백엔드 개발자가 되고 싶어요!!</p>
+            </div>
+            <div></div>
+        </section>
+        <p class="title">Likes</p>
+        <section class="likes" id="likes">
+            <div class="likes__photo">
+                <img class="hiking" src="{{ url_for('static', filename='img/hiking.jpg') }}" alt="">
+                <p>친구들이랑 등산하는 걸 좋아해요^^</p>
+            </div>
+            <div class="likes__photo">
+                <img class="pingpong" src="{{ url_for('static', filename='img/pingpong.jpg') }}" alt="">
+                <p>탁구, 축구 등등 공을 가지고 하는 운동은 다 좋아합니다!</p>
+            </div>
+            <div class="likes__photo">
+                <img class="travel" src="{{ url_for('static', filename='img/travel.jpg') }}" alt="">
+                <p>해외여행을 가고 싶어요 .. 코로나 끝나면 스위스에 갈거에요! ㅎㅎ</p>
+            </div>
+            <div class="likes__photo">
+                <img class="game" src="{{ url_for('static', filename='img/game.PNG') }}" alt="">
+                <p>집에 있을 땐 컴퓨터게임을 즐겨 해요</p>
+            </div>   
+        </section>
+        <p class="title">Game</p>
+        <section class="games" id="game">
+            <div class="games__item"><a href="{{ url_for('game') }}"><i class="fas fa-dice-d6 fa-2x"></i></a></div>
+        </section>
+        <p class="title">Contact</p>
+        <section class="contact" id="contact">
+            <a class="contact__item" href="mailto:diddmlvkf@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+            <a class="contact__item" href="https://github.com/tonic523"><i class="fab fa-github fa-2x"></i></a>
+            <a class="contact__item" href="https://velog.io/@tonic523">velog</a>
+        </section>
+    </main>
+</body>
+</html>

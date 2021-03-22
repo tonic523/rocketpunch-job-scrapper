@@ -1,0 +1,130 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding-top: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: gray;
+  z-index: 1;
+}
+
+.nav__column a {
+  font-size: 20px;
+  color:white;
+}
+main {
+  padding: 0 10%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.profile,
+.likes,
+.contact,
+.games {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile__photo {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.profile__info {
+  height: 300px;
+  width: 300px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name,
+.age,
+.mbti,
+.goal {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.likes__photo {
+  position: relative;
+  height: 250px;
+  width: 250px;
+}
+
+.likes__photo p {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  opacity: 0;
+}
+.hiking,
+.pingpong,
+.travel,
+.game {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+}
+
+.likes__photo:hover img {
+  opacity: 0.5;
+}
+
+.likes__photo:hover p {
+  opacity: 100%;
+}
+
+canvas {
+  background: #eee;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.contact {
+  height: 100px;
+}
+
+.contact__item {
+  margin: 100px;
+  color: black;
+}
+
+.contact__item:last-child {
+  font-size: 20px;
+}
